@@ -1,0 +1,50 @@
+<html>
+<head>
+<script>
+function readValues()
+{
+//read name from the form and store in the variable
+s_name=form_reg.name.value;
+//read password from the form and store in the variable
+s_password=document.form_reg.pwd.value;
+if(s_name=="" || s_name==null)
+{
+alert("please enter name");
+}
+else
+{
+//print on browser
+document.writeln("Welcome <br>");
+document.writeln(s_name+"<br>");
+}
+if(s_password=="" || s_password==null)
+{
+alert("please enter password");
+}
+else
+{
+//finding length of password
+len=s_password.length;
+if(len<=8)
+{
+alert("password length must be minimum of 8 characters");
+}
+else
+{
+document.writeln(s_password);
+}
+}
+
+
+}
+</script>
+</head>
+<body>
+<form name="form_reg" action ="serveradders">
+NAME :<input type="text" name="name" value="cse" ><br>
+PASSWORD:<input type="password" name="pwd" value="123456">
+<br>
+<input type="button" value="click here" onclick="readValues()">
+</form>
+</body>
+</html>
